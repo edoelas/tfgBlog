@@ -1,4 +1,3 @@
 auto: true
 markdown: kramdown
-permalink: /:year/:month/:day/:title
-baseurl: /tfgBlog
+permalink: /tfgBlog/:year/:month/:day/:title
