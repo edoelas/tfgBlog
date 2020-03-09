@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Your Name" />
+    <title>{{ page.title }}</title>
+    <head>
+      <style type="text/css">
+          
+          body{
+          margin:1em auto;
+          max-width:40em;
+          padding:0 .62em;
+          font:1.2em/1.62 sans-serif;
+        }
+    
+        h1,h2,h3 {
+          line-height:1.2;
+        }
+    
+        @media print{
+          body{
+            max-width:none
+          }
+        }
+    
+      </style>
+    
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">{{ page.title }}</a></h1>
+    </header>
+    <section>
+      {{ content }}
+    </section>
+    
+  </body>
+</html>
