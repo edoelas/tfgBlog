@@ -1,9 +1,5 @@
 auto: true
 
-branches:
-  only:
-    - master 
-
 collections:
   documents:
     output: true
