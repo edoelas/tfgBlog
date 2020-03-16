@@ -2,7 +2,7 @@ auto: true
 
 branches:
   only:
-    - master
+    - master 
 
 collections:
   documents:
