@@ -1,9 +1,11 @@
 auto: true
-destination: ./docs
 
-highlighter: rouge
+branches:
+  only:
+    - master
 
 collections:
   documents:
     output: true
     permalink: /document/:name
+
