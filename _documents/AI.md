@@ -5,5 +5,6 @@ title: Artificial intelligence
 
 This is just a test
 
-* Test1
 * Test2
+* Test2
+* Test1
