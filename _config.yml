@@ -1,3 +1,9 @@
 auto: true
 destination: ./docs
 
+highlighter: rouge
+
+collections:
+  documents:
+    output: true
+    permalink: /document/:name
