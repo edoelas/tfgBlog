@@ -7,6 +7,9 @@ typora-root-url: ./
 
 ## Basic description of the game
 
-The game is a tactical strategy game and the action takes place in a map where each entity occupies one discret position. Each entity belongs to a team and has a set of habilities which has to use in order to archive certain goal that shares with all his team.
+The game is a tactical strategy game. The action takes place in a map where each entity occupies one discret position. Each entity belongs to a team and has a set of habilities which has to use in order to archive certain goal that shares with all his team.
 
-![Image result for wakfu battle](/../assets/images/15d4e390cf54d98bf9d3658c455b33e6.png){: .center-img}
+## Map
+
+
+
