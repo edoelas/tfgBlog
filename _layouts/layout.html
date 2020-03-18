@@ -18,13 +18,22 @@
       body{
         color: #444;
         background-color: #EEE;
+
+      }
+      header{
         margin: 40px auto;
         max-width: 650px;
         line-height: 1.6em;
         font-size: 18px;
         padding: 0;
       }
-
+      section{
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.6em;
+        font-size: 18px;
+        padding: 0;
+      }
       footer{
         background-color: #ccc;
       }
@@ -63,19 +72,19 @@
       {{ content }}
     </section>
     <br>
-
+    <footer>
+      <div class="row">
+        <div class="column">
+          <h3>Information</h3>
+          <p>Author: Miguel Edo</p>
+          <p>Contact information: <a href="mailto:miego.cvcv@gmail.com"> miego.cvcv@gmail.com</a>.</p>
+        </div>
+        <div class="column">
+          <h3>Links</h3>
+          <p><a href="{{ site.baseurl }}">Home</a></p>
+        </div>
+      </div>
+    </footer>
   </body>
-  <footer>
-    <div class="row">
-      <div class="column">
-        <h3>Information</h3>
-        <p>Author: Miguel Edo</p>
-        <p>Contact information: <a href="mailto:miego.cvcv@gmail.com"> miego.cvcv@gmail.com</a>.</p>
-      </div>
-      <div class="column">
-        <h3>Links</h3>
-        <p><a href="{{ site.baseurl }}">Home</a></p>
-      </div>
-    </div>
-  </footer>
+  
 </html>
