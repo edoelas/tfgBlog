@@ -32,6 +32,25 @@
         width: 60%;
       }
 
+      * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
     </style>
   
   </head>
@@ -42,12 +61,22 @@
     <section>
       {{ content }}
     </section>
-    <hr>
     <footer>
-      <a href="{{ site.baseurl }}">Home</a>
-      <p>Author: Miguel Edo</p>
-      <p>Contact information: <a href="mailto:miego.cvcv@gmail.com">
-        miego.cvcv@gmail.com</a>.</p>
+      <br>
+      <hr>
+      <div class="row">
+        <div class="column" style="background-color:#aaa;">
+          <h2>Information</h2>
+          <p>Author: Miguel Edo</p>
+          <p>Contact information: <a href="mailto:miego.cvcv@gmail.com"> miego.cvcv@gmail.com</a>.</p>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <h2>Links</h2>
+          <p><a href="{{ site.baseurl }}">Home</a></p>
+        </div>
+      </div>
+      
+      
     </footer>
   </body>
 </html>
