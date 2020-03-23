@@ -1,7 +1,7 @@
 ---
 layout: document
 title: Game Design Document
-typora-copy-images-to: ../assets
+typora-copy-images-to: /../assets
 typora-root-url: ./
 ---
 
@@ -9,11 +9,13 @@ typora-root-url: ./
 
 The game is a tactical strategy game. The action takes place in a map where each entity occupies one discrete position. Each entity belongs to a team and has a set of abilities which has to use in order to archive certain goal that shares with all his team.
 
-![Resultado de imagen de test image](./../assets/images/test.png){:.img } 
+![](./../assets/images/test.png){:.img } 
+
+
 
 ## Map
 
-The map has the shape of a rectangular orthogonal grid. In each position of this grid there can be three types of terrain:
+The map has the shape of a rectangular grid. In each position of this grid there can be three types of terrain:
 
 - **Floor**: The entities can occupy this space and it does not blocks abilities.
 - **Walls**: The entities can not occupy this space and it blocks abilities.
