@@ -6,3 +6,5 @@ collections:
     permalink: /document/:name
 
 baseurl: /tfgBlog
+
+gems: [jekyll-mermaid]
