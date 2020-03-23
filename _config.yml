@@ -7,4 +7,3 @@ collections:
 
 baseurl: /tfgBlog
 
-gems: [jekyll-mermaid]
