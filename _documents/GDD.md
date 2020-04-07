@@ -57,3 +57,28 @@ Each action has:
 
 
 
+## Minimum viable product
+
+### Entities
+
+* **Player**: 
+
+### Terrain
+
+- **Wall**
+- **Floor**
+
+### Actions
+
+- **Move**
+- **Throw**
+- **Strike**
+- **Summon healing floor**
+
+### Graphics
+
+- **GUI**: Shows the health, the action buffer, 
+- **3D map**: 
+
+
+
