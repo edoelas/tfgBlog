@@ -111,6 +111,9 @@ class Area{
 +int maxDistance
 +int areaType
 }
+</div>
+
+
 
 ```mermaid
 classDiagram
