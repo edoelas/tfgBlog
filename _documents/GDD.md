@@ -9,7 +9,7 @@ typora-root-url: ./
 
 The game is a tactical strategy game. The action takes place in a map where each entity occupies one discrete position. Each entity belongs to a team and has a set of abilities which has to use in order to archive certain goal that shares with all his team.
 
-![](./../assets/images/test.png){:.img } 
+![Example of tactical game](./../assets/images/DX3FtRp.jpg) 
 
 
 
@@ -61,7 +61,7 @@ Each action has:
 
 ### Entities
 
-* **Player**: 
+* **Player**:  Standart player. No AI, just GUI client.
 
 ### Terrain
 
@@ -77,8 +77,8 @@ Each action has:
 
 ### Graphics
 
-- **GUI**: Shows the health, the action buffer, 
-- **3D map**: 
+- **GUI**: Shows the health, the action buffer, the health of the enemies.
+- **3D map**: Simple representation of 3d map.
 
 
 
