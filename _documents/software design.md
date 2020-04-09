@@ -8,9 +8,7 @@ title: Software design
 
 
 
-![mermaid-diagram-20200409130359](./../assets/images/mermaid-diagram-20200409130359.png){:.img}
-
-```mermaid
+<div class="mermaid">
 classDiagram
 
 Game o-- Map
@@ -115,7 +113,7 @@ class Area{
 +int maxDistance
 +int areaType
 }
-```
+</div>
 
 Each of the action types and entities have a fixed ID
 
