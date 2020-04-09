@@ -28,3 +28,4 @@ Right now is too soon to talk about which graphical techniques are going to be u
 - [Ambient oclusion](https://en.wikipedia.org/wiki/Ambient_occlusion#Implementation)
 - [Low poly 3D models](https://en.wikipedia.org/wiki/Low_poly)
 - Pre-rendered models 
+
