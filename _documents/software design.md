@@ -16,6 +16,22 @@ It has taken a lot of time and iterations to get this right and after using this
 
 Three different design patterns (or modifications of those patterns) have been used here:
 
-- **Observer**: since I want to have a representation of the map as a matrix (for making some calculations faster) but I also wanted to modify all the atributes of the entities from the Entity object I have decided to make the object map a subscriver of all the entities of the game. By doing so I am able to change the position of the entity changing the atributes of it and automatically the position will be updated on the map. Since there is just one subscriber the implementation is simpler.
-- **Strategy**: 
-- **Flyweight**: In this case it hasn
+- **Observer**: since I want to have a representation of the map as a matrix (for making some calculations faster) but I also wanted to modify all the atributes of the entities from the Entity object I have decided to make the object map a subscriver of all the entities of the game. By doing so I am able to change the position of the entity changing the atributes of it and automatically the position will be updated on the map. Since there is just one subscriber the implementation is quite simple.
+
+- **Strategy**: I have used it to reduce the complexity of implementing new ActionType. From the [refactoring guru](https://refactoring.guru/design-patterns/strategy) website:
+
+  > **Strategy** is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+
+  In our case the diferent algorithms are the methods that define what happens in when the action is executed. It is also useful because the rest of the code does not need to know which action is executing, it just needs to know that it is an action.
+
+- **Flyweight**: in this case it is used to be able to store a set of actions in the action buffer (to know more about this buffer refer to the GDD) . To understand this properly we need to explan a bit what the code is supossed to do:
+
+  ActionType is a generic action that an entity can execute (for example to move) but without the specific information of who is moving or where it is moving. We store a list of ActionType inside the Entity so each entity can execute a diferent subset of types of actions. When we decide to execute an action we have to specify some aditional information (in the case of moving, the position where we want to move) and store it in the action buffer. At some point it will get executed and the aditional information will get lost.
+
+  To be able to handle this we have the class Action, which includes an ActionType as one of its parameters. There are also others parameters that store the specific data of the action (for example, where to move). When we execute an action we create a Action object with the desired ActionType, then we store the Action object in the action buffer. When it is time to execute the action because is the next one in the action buffer we just get the first element of the buffer, pop it, and execute the execute() method. After doing this the Action object disapears but the ActionType is still stored in the entity. By using this system we also avoid repeating a lot information since we just create a new Action object but do not duplicate the ActionType.
+
+  The Flyweight design pattern also includes a factory that allows us to reduce even more the amount of RAM used by storing the ActionTypes in the factory and by doing so avoiding duplicated ActionType instances in different entities. The problem is that Flyweight was not thought to be mixed with strategy, so that factory just allows us to have on kind of object but we have different kind of ActionTypes. I have tried to avoid duplicating the instances of the objects. The first idea was to implement the design pattern singleton in the ActionType object, but singlenton does not allow to use inheritance because it uses static methods. Another option is to implement singleton in each one of the ActionTypes, but that would mean repeating code (and I try to make good code). At the end I have decided justo to repeat the instances because in the worst case scenario the numer of repeated instances will be the same as the number of entities (which should be really low, around 6) and the ActionType objects almost do not store any information a part from the emiting and receiving area.  
+
+  
+
+To conclude I would like to thanks [TonyToscana](https://github.com/TonyToscana) since he was the one that recommended me to learn design patterns and that helped me during the learning and development process. Without him this would have been really hard.
