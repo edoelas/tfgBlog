@@ -9,7 +9,7 @@ typora-root-url: ./
 
 The game is a tactical strategy game. The action takes place in a map where each entity occupies one discrete position. Each entity belongs to a team and has a set of abilities which has to use in order to archive certain goal that shares with all his team.
 
-![Example of tactical game](./../assets/images/DX3FtRp.jpg){.img} 
+![Example of tactical game](./../assets/images/DX3FtRp.jpg){:.img} 
 
 
 

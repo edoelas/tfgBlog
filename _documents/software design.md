@@ -8,7 +8,7 @@ title: Software design
 
 
 
-![mermaid-diagram-20200409130359](./../assets/images/mermaid-diagram-20200409130359.png){.img}
+![mermaid-diagram-20200409130359](./../assets/images/mermaid-diagram-20200409130359.png){:.img}
 
 ```mermaid
 classDiagram
