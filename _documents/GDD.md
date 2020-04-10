@@ -70,22 +70,18 @@ Of course the real game will be a bit more complex and interesting, but I think 
 
 ### Map
 
-The map has the shape of a rectangular grid. In each position of this grid there can be three types of terrain:
-
-- **Floor**: The entities can occupy this space and it does not blocks abilities.
-- **Walls**: The entities can not occupy this space and it blocks abilities.
-- **Holes**: The entities can not occupy this space and it does not block abilities.
+The map has the shape of a rectangular grid. In each position of this grid there can be an entity.
 
 
 
 ### Entities
 
-There can be three types of entities:
+The entities can be divided in: 
 
-- **Passive entities**: Objects that occupy positions but do not execute actions.
-- **Active entities**: Objects that occupy positions and in each turn execute actions.
+- **Passive or active**: Passive if do not execute actions and active if they execute actions.
+-  **Blocking or non-blocking**: blocking if the avoid other entities to occupy this position or non blocking if they allow blocking entities (but no non-blocking) to occupy the position. 
 
-- **Players**: Real players that occupy positions and can execute abilities. The main difference is between the active entities and the players is that the active entities do not take in to account the state of the game when executing actions.
+
 
 Each entity has:
 
@@ -96,13 +92,7 @@ Each entity has:
 
 ### Actions
 
-The actions have to be executed by an entity and have effect over a set of entities. The actions can be executed inside an area which position is defined in relation to the position of the entity that executes the action. Each action can involve zero entities, just the emitter, or the emitter and a set of receivers. 
-
-There can be three types of actions:
-
-- **Movement**: This actions just change the position of the player which executes the action.
-- **Passive actions**: This actions are executed automatically in each turn
-- **Active actions**: This actions need to be executed by an entity
+The actions have to be executed by an entity and have effect over a set of entities. The actions can be executed inside an area which position is defined in relation to the position of the entity that executes the action. Each action can involve zero entities, just the emitter, or the emitter and a set of receivers. Moving the player is also considered an action.
 
 Each action has:
 
@@ -110,3 +100,8 @@ Each action has:
 - **Receiving position**: The position which receives the action. We use a position instead of an entity because maybe there are more than one entity in that position or the action has an effect area. By just using a position then we can retrieve the set of entities inside the area.
 - **Action**: describes what happens to the all the involved entities.
 
+
+
+### Effects
+
+The effects are actions that affect in each turn one entity. For example, not allowing it to move or healing certain amount of life.
