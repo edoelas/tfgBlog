@@ -40,15 +40,35 @@ Now I will try to make a really detailed explanation of how a game should be dev
 
 4. The first cycle ends and our first action gets executed, but the enemy also has decided to move. Both entities collide and the action does not get executed.
 
-5. We empty our action buffer since the enemy is not in the adjacent square and we won't be able to hit it. 
+   ![](./../assets/images/game3.svg){:.img}
+
+5. Now the enemy is not in the adjacent square (as we had planned it was going to happen) so we empty our action buffer and change the strategy. 
+
+   ![](./../assets/images/game4.svg){:.img}
 
 6. Our new strategy will consist in wait for him to approach us and then attack.
 
+   ![](./../assets/images/game5.5.svg){:.img}
+
 7. The first action (waiting) gets executed and the enemy approach us as planned.
+
+   ![](./../assets/images/game5.svg){:.img}
 
 8. We are able to attack the enemy but he also attacks us.
 
-## Map
+   ![](./../assets/images/game6.svg){:.img}
+
+Of course the real game will be a bit more complex and interesting, but I think in this example we have been able to see some of the main features of the game: 
+
+- Collisions of actions.
+- Not being able to predict the moves of our enemies.
+- The use of the action buffer.
+
+
+
+## More detailed description
+
+### Map
 
 The map has the shape of a rectangular grid. In each position of this grid there can be three types of terrain:
 
@@ -58,7 +78,7 @@ The map has the shape of a rectangular grid. In each position of this grid there
 
 
 
-## Entities
+### Entities
 
 There can be three types of entities:
 
@@ -74,7 +94,7 @@ Each entity has:
 
 
 
-## Actions
+### Actions
 
 The actions have to be executed by an entity and have effect over a set of entities. The actions can be executed inside an area which position is defined in relation to the position of the entity that executes the action. Each action can involve zero entities, just the emitter, or the emitter and a set of receivers. 
 
@@ -89,31 +109,4 @@ Each action has:
 - **Emitter**: The entity that executes the action
 - **Receiving position**: The position which receives the action. We use a position instead of an entity because maybe there are more than one entity in that position or the action has an effect area. By just using a position then we can retrieve the set of entities inside the area.
 - **Action**: describes what happens to the all the involved entities.
-
-
-
-## Minimum viable product
-
-### Entities
-
-* **Player**:  Standart player. No AI, just GUI client.
-
-### Terrain
-
-- **Wall**
-- **Floor**
-
-### Actions
-
-- **Move**
-- **Throw**
-- **Strike**
-- **Summon healing floor**
-
-### Graphics
-
-- **GUI**: Shows the health, the action buffer, the health of the enemies.
-- **3D map**: Simple representation of 3d map.
-
-
 
