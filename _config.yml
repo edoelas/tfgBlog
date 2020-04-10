@@ -5,5 +5,5 @@ collections:
     output: true
     permalink: /document/:name
 
-baseurl: /tfgBlog
+baseurl: /tfgblog
 
