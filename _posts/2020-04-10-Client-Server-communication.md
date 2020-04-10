@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Post
+title: Client-Server communication
 ---
 
 {{ site.baseurl }}/document/gdd
