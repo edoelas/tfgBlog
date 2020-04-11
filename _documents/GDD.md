@@ -81,8 +81,6 @@ The entities can be divided in:
 - **Passive or active**: Passive if do not execute actions and active if they execute actions.
 -  **Blocking or non-blocking**: blocking if the avoid other entities to occupy this position or non blocking if they allow blocking entities (but no non-blocking) to occupy the position. 
 
-
-
 Each entity has:
 
 - An amount of HP
@@ -100,8 +98,36 @@ Each action has:
 - **Receiving position**: The position which receives the action. We use a position instead of an entity because maybe there are more than one entity in that position or the action has an effect area. By just using a position then we can retrieve the set of entities inside the area.
 - **Action**: describes what happens to the all the involved entities.
 
-
+Actions will also have cooldown (and maybe casting time).
 
 ### Effects
 
 The effects are actions that affect in each turn one entity. For example, not allowing it to move or healing certain amount of life.
+
+
+
+## Minimum Viable Product
+
+In order to know if the idea is working as expected first I am going to develop the MVP. Quoting [Wikipedia](https://en.wikipedia.org/wiki/Minimum_viable_product):
+
+> A **minimum viable product** (**MVP**) is a version of a product with just enough features to satisfy early customers and provide feedback for future [product development](https://en.wikipedia.org/wiki/New_product_development).
+
+In our version of the MVP we will just have:
+
+- Entities: just the blocking entities will be implemented. The implemented entities will be players and walls.
+- Actions: a small set of actions (Move, throw, kick, heal) will be implemented. Actions won't have cooldown.
+- Effects: There won't be any effect.
+
+
+
+## Game design problems
+
+### Execution of all the actions at the same time
+
+Right now this is the only design choice that worries me. Since you don't know the action of your opponent when you are deciding your action lots of action choices will be have to based on guesses. This can be fun or can make the user feel like that the game is a matter of luck. These are some alternatives:
+
+- **Each team executes the actions in different turns**: by doing this we make sure that the chosen action is based on a complete information about the game.
+- **Non synchronised actions**: each action has a different duration. For example, if you want to heal a friend it takes 5 turns, so the enemy, knowing what u are doing, can attack you since it knows that you will try to hold the position for 5 turns.
+
+Each solution has its advantages and problems.
+
