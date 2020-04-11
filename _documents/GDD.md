@@ -127,7 +127,32 @@ In our version of the MVP we will just have:
 Right now this is the only design choice that worries me. Since you don't know the action of your opponent when you are deciding your action lots of action choices will be have to based on guesses. This can be fun or can make the user feel like that the game is a matter of luck. These are some alternatives:
 
 - **Each team executes the actions in different turns**: by doing this we make sure that the chosen action is based on a complete information about the game.
-- **Non synchronised actions**: each action has a different duration. For example, if you want to heal a friend it takes 5 turns, so the enemy, knowing what u are doing, can attack you since it knows that you will try to hold the position for 5 turns.
 
-Each solution has its advantages and problems.
+  <u>Advantages</u>: 
+
+  - Easy to implement.
+  - The original idea of the game prevails.
+
+  <u>Disadvantages</u>:
+
+  - One team has one more turn than the other.
+
+- **Non synchronised actions**: each action has a different duration. For example, if you want to heal a friend it takes 5 turns, so the enemy, knowing what you are doing, can attack you since it knows that you will try to hold the position for 5 turns.
+
+  <u>Advantages</u>: 
+
+  - More complex game (not sure if it is an advantage)
+
+  <u>Disadvantages</u>:
+
+  - Harder to implement
+  - AI more complex
+
+For the MVP I will implement the first solution.
+
+
+
+### Other ideas
+
+- **Multiple actions from the action buffer executed in a row:** maybe it is possible make the game more focused in the strategy and less in the action if multiple actions from the action buffer are executed in a row. This will require a better communication between the members of the team and the need for longer term strategies.
 
