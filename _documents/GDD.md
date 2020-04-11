@@ -26,6 +26,8 @@ But our game has two big differences compared to other tactical strategy games:
 
 ## Explanation of one game
 
+**This section may change, look at the "game design problems" section**
+
 Now I will try to make a really detailed explanation of how a game should be developed. With this I hope that there is no doubt about how the game works:
 
 1. First we open our graphical client and get connected to a game
