@@ -49,6 +49,9 @@
   </head>
   <body>
     <header>
+      {% if site.baseurl != page.url %}
+      <p><a href="{{ site.baseurl }}">Home</a></p>
+      {% endif %}
       <h1>{{ page.title }}</h1>
     </header>
     <section>
