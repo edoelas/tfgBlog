@@ -9,7 +9,7 @@ Okay, this is way harder than I thought. But let's solve the problem one by one.
 
 This diagram shows more or less which the idea:
 
-![mermaid-diagram-20200412150657](/home/edoelas/Downloads/mermaid-diagram-20200412150657.svg)
+![mermaid-diagram-20200412150657](./../assets/images/mermaid-diagram-20200412150657.svg){:.img}
 
 
 
