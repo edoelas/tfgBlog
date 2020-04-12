@@ -1,4 +1,6 @@
 ---
+
+
 layout: document
 title: Description of the game
 typora-root-url: ./
@@ -47,9 +49,27 @@ I think is a good idea to understand the main points of the game to talk about w
 
 ## Simulation of one game
 
+**Disclaimer**: for some unknown reason the images have been exported with some graphical artefacts. Lets just imagine that the map is a perfect grid without missing lines and that all the lines are the same width.
 
+For this simulation lets assume that there are just two actions: moving and kicking. You can move to adjacent squares and if you get kicked you are dead.
 
-![](./../assets/images/sim1.svg){:.img}![](./../assets/images/sim2.svg){:.img}![](./../assets/images/sim3.svg){:.img}![](./../assets/images/sim4.svg){:.img}![](./../assets/images/sim5.svg){:.img}![](./../assets/images/sim6.svg){:.img}![](./../assets/images/sim7.svg){:.img}![](./../assets/images/sim8.svg){:.img}![](./../assets/images/sim9.svg){:.img}![](./../assets/images/sim10.svg){:.img}![](./../assets/images/sim11.svg){:.img}![](./../assets/images/sim12.svg){:.img}![](./../assets/images/sim13.svg){:.img}![](./../assets/images/sim14.svg){:.img}![](./../assets/images/sim15.svg){:.img}
+- This is the starting state of the game. Two players in each team. 
+
+![](./../assets/images/sim1.svg){:.img}
+
+The red team starts. Each player has to choose the three actions it will execute during the first round of the red team. They decide to try to get to the other team through the hole in the wall. The player 1 will get the central position and the player two will be just behind him. Let's see how the actions are executed:
+
+![](./../assets/images/sim2.svg){:.img}
+
+![](./../assets/images/sim3.svg){:.img}
+
+Oh! Disaster! What has happened?! A bad communication in the team has created a collision between the two players. When this happens the action does not get applied, but there are still some actions left to execute. Remember that during the executions of the actions the players can't change them.
+
+![](./../assets/images/sim4.svg){:.img}
+
+![](./../assets/images/sim5.svg){:.img}The rest of the actions are executed and the situation of the game ends like this.![](./../assets/images/sim6.svg){:.img}
+
+![](./../assets/images/sim7.svg){:.img}![](./../assets/images/sim8.svg){:.img}![](./../assets/images/sim9.svg){:.img}![](./../assets/images/sim10.svg){:.img}![](./../assets/images/sim11.svg){:.img}![](./../assets/images/sim12.svg){:.img}![](./../assets/images/sim13.svg){:.img}![](./../assets/images/sim14.svg){:.img}![](./../assets/images/sim15.svg){:.img}
 
 ## More detailed description
 
