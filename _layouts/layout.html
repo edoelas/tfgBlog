@@ -36,9 +36,6 @@
         font-size: 18px;
         padding: 0;
       }
-      footer{
-        background-color: #ccc;
-      }
   
       .img {
         display: block;
@@ -47,50 +44,18 @@
         width: 100%;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-      }
-
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      .row{
-        max-width: 650px;
-        margin: 0px auto;
-      }
-
     </style>
   
   </head>
   <body>
     <header>
+      <p><a href="{{ site.baseurl }}">Home</a></p>
       <h1>{{ page.title }}</h1>
     </header>
     <section>
       {{ content }}
     </section>
     <br>
-    <footer>
-      <div class="row">
-        <div class="column">
-          <h3>Contact information</h3>
-          <p>Author: Miguel Edo</p>
-          <p>Email: <a href="mailto:miego.cvcv@gmail.com"> miego.cvcv@gmail.com</a>.</p>
-        </div>
-        <div class="column">
-          <h3>Links</h3>
-          <p><a href="{{ site.baseurl }}">Home</a></p>
-        </div>
-      </div>
-    </footer>
   </body>
   
 </html>

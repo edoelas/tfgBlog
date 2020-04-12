@@ -47,7 +47,7 @@ I think is a good idea to understand the main points of the game to talk about w
 
 ## Explanation of one game
 
-1. 
+- 
 
 
 
