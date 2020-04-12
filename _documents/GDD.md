@@ -45,11 +45,11 @@ I think is a good idea to understand the main points of the game to talk about w
 
 
 
-## Explanation of one game
-
-- 
+## Simulation of one game
 
 
+
+![](./../assets/images/sim1.svg){:.img}![](./../assets/images/sim2.svg){:.img}![](./../assets/images/sim3.svg){:.img}![](./../assets/images/sim4.svg){:.img}![](./../assets/images/sim5.svg){:.img}![](./../assets/images/sim6.svg){:.img}![](./../assets/images/sim7.svg){:.img}![](./../assets/images/sim8.svg){:.img}![](./../assets/images/sim9.svg){:.img}![](./../assets/images/sim10.svg){:.img}![](./../assets/images/sim11.svg){:.img}![](./../assets/images/sim12.svg){:.img}![](./../assets/images/sim13.svg){:.img}![](./../assets/images/sim14.svg){:.img}![](./../assets/images/sim15.svg){:.img}
 
 ## More detailed description
 
