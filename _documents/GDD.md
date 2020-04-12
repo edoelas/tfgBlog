@@ -49,11 +49,11 @@ I think is a good idea to understand the main points of the game to talk about w
 
 ## Simulation of one game
 
-**Disclaimer**: for some unknown reason the images have been exported with some graphical artefacts. Lets just imagine that the map is a perfect grid without missing lines and that all the lines are the same width.
+**Disclaimer**: for some unknown reason the images have been exported with some graphical artefacts. Let's just imagine that the map is a perfect grid without missing lines and that all the lines are the same width.
 
-For this simulation lets assume that there are just two actions: moving and kicking. You can move to adjacent squares and if you get kicked you are dead.
+For this simulation, let's assume that there are just two actions: moving and kicking. You can move to adjacent squares and if you get kicked you are dead.
 
-- This is the starting state of the game. Two players in each team. 
+This is the starting state of the game. Two players in each team. 
 
 ![](./../assets/images/sim1.svg){:.img}
 
@@ -69,7 +69,7 @@ Oh! Disaster! What has happened?! A bad communication in the team has created a 
 
 ![](./../assets/images/sim5.svg){:.img}
 
-The rest of the actions are executed and the situation of the game ends like this. Now is the round of the blue team, which has a way better communication. The player 1 decides to go first to avoid the problem that the red team had.
+The rest of the actions are executed and the situation of the game ends like this. During the last action, the player 1 has tried to go through a wall. He has discovered how physics work the hard way and his action hasn't been applied. Now is the round of the blue team, which has a way better communication. Player 1 decides to go first to avoid the problem that the red team had.
 
 ![](./../assets/images/sim6.svg){:.img}
 
@@ -77,7 +77,7 @@ The rest of the actions are executed and the situation of the game ends like thi
 
 ![](./../assets/images/sim8.svg){:.img}
 
-They have reached the position that they wanted but maybe that was not the best strategy. Now is turn of the red team again and to avoid more conflicts they decide that the player 1 is the one that is going to do all the job. He will move in front of the player 1 of the blue team, kick him and take its position.
+They have reached the position that they wanted but maybe that was not the best strategy. Now it is turn of the red team again and to avoid more conflicts they decide that the player 1 is the one that is going to do all the job. He will move in front of the player 1 of the blue team, kick him and take its position.
 
 ![](./../assets/images/sim9.svg){:.img}
 
@@ -93,7 +93,7 @@ Now all the player 2 of the blue team is to wait and hope that the player 2 of t
 
 ![](./../assets/images/sim13.svg){:.img}
 
-In fact, it is not. The red player gets too eager about the victory and makes a big mistake. Now he is right in front of the blue player and can't do anything. Lets see if the blue player is clever enough to win this match.
+It is not. The red player gets too eager about the victory and makes a big mistake. Now he is right in front of the blue player and can't do anything. Lets see if the blue player is clever enough to win this match.
 
 ![](./../assets/images/sim14.svg){:.img}
 
