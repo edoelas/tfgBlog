@@ -67,9 +67,41 @@ Oh! Disaster! What has happened?! A bad communication in the team has created a 
 
 ![](./../assets/images/sim4.svg){:.img}
 
-![](./../assets/images/sim5.svg){:.img}The rest of the actions are executed and the situation of the game ends like this.![](./../assets/images/sim6.svg){:.img}
+![](./../assets/images/sim5.svg){:.img}
 
-![](./../assets/images/sim7.svg){:.img}![](./../assets/images/sim8.svg){:.img}![](./../assets/images/sim9.svg){:.img}![](./../assets/images/sim10.svg){:.img}![](./../assets/images/sim11.svg){:.img}![](./../assets/images/sim12.svg){:.img}![](./../assets/images/sim13.svg){:.img}![](./../assets/images/sim14.svg){:.img}![](./../assets/images/sim15.svg){:.img}
+The rest of the actions are executed and the situation of the game ends like this. Now is the round of the blue team, which has a way better communication. The player 1 decides to go first to avoid the problem that the red team had.
+
+![](./../assets/images/sim6.svg){:.img}
+
+![](./../assets/images/sim7.svg){:.img}
+
+![](./../assets/images/sim8.svg){:.img}
+
+They have reached the position that they wanted but maybe that was not the best strategy. Now is turn of the red team again and to avoid more conflicts they decide that the player 1 is the one that is going to do all the job. He will move in front of the player 1 of the blue team, kick him and take its position.
+
+![](./../assets/images/sim9.svg){:.img}
+
+![](./../assets/images/sim10.svg){:.img}
+
+It seems to work, but now he is exposed to the player 2 of the blue team. The player two is really clever so it kicks player 1 of the read team and performs a tactical retreat.
+
+![](./../assets/images/sim11.svg){:.img}
+
+![](./../assets/images/sim12.svg){:.img}
+
+Now all the player 2 of the blue team is to wait and hope that the player 2 of the red team is ~~stupid~~ not good at strategy games.
+
+![](./../assets/images/sim13.svg){:.img}
+
+In fact, it is not. The red player gets too eager about the victory and makes a big mistake. Now he is right in front of the blue player and can't do anything. Lets see if the blue player is clever enough to win this match.
+
+![](./../assets/images/sim14.svg){:.img}
+
+![](./../assets/images/sim15.svg){:.img}
+
+Yes! The blue player is incredibly smart and manages to get the victory for his team.
+
+
 
 ## More detailed description
 
