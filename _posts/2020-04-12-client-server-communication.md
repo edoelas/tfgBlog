@@ -9,7 +9,7 @@ Okay, this is way harder than I thought. But let's solve the problem one by one.
 
 This diagram shows more or less which the idea:
 
-![](./../assets/images/mermaid-diagram2.svg){:.img}
+
 
 
 
