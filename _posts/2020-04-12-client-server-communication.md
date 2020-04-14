@@ -42,6 +42,8 @@ And if I want to store a log of the matches? I need to organise the information 
 
 JSON solves all these problems, so I am using JSON.
 
+
+
 ### Broker
 
 What I want to do is not that complicated to do with sockets, but by using a broker solves some problems that otherwise we should solve on our own.
@@ -50,4 +52,5 @@ The two options that I have evaluated are ZeroMQ and RabbitMQ. I have decided to
 
 
 
-[TO BE CONTINUED]
+### Time problems
+
