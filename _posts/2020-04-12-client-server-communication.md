@@ -54,3 +54,4 @@ The two options that I have evaluated are ZeroMQ and RabbitMQ. I have decided to
 
 ### Time problems
 
+[TODO]
