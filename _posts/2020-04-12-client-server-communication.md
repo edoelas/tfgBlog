@@ -20,11 +20,11 @@ Now I will try to explain with more detail what is going on there:
 
 Now the game loop starts. It is composed of two turns.
 
-3. All the members of the team decide their actions and send them to the server
-4. The server creates a new map based on the previous map and the actions that have received. 
-5. The server sends the new map and the actions taken by the team to all the teams
+3. All the members of the team 1 decide their actions and send them to the server. It is possible that the time ends and some or all members haven't send anything.
+4. The server creates a new map based on the previous map and the actions that have received from the players. 
+5. The server sends the new map and the actions taken by the team 1 to both teams
 
-Then is the turn of the other team, which follow the same procedure.
+Then is the turn of the team 2, which follow the same procedure.
 
 
 
@@ -100,7 +100,7 @@ Okay, now we know what we want to send, but in **which structure**?
 ]
 ```
 
-Reading this JSON structure we can know that it was the turn of `player1` (because its "taken_action" list is not empty), and knowing that 1 is the actionID for move and 2 is the actionID for some kind of attack we can read that:
+Reading this JSON structure we can know that it was the turn of player1 (because its "taken_action" list is not empty), and knowing that 1 is the actionID for move and 2 is the actionID for some kind of attack we can read that:
 
 1. Player1 has moved to (1,0)
 2. Then it has moved to (2,0) to have player2 in the line of sight
@@ -116,3 +116,7 @@ What I want to do is not that complicated to do with sockets, but by using a bro
 The two options that I have evaluated are ZeroMQ and RabbitMQ. I have decided to use RabbitMQ since it seems that is easier to use and I do not need the extra speed that ZeroMQ offers.
 
 
+
+## Conclusion
+
+Before continue theorizing about how to implement the communication I want to create the serialisation and the unserialization functions for the server and client message. After that I will try to implement a isolated simplified version of the communication protocol which I can use to find problems. When I have something that is good enough I will implement it in the project.
