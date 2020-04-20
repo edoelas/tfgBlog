@@ -42,6 +42,71 @@ And if I want to store a log of the matches? I need to organise the information 
 
 JSON solves all these problems, so I am using JSON.
 
+### Message
+
+Okay, now we know that we want to send the information using JSON, but **which information**?
+
+The **information that the map has to send** to the clients is:
+
+- Lists of the actions ID that all the entities have taken. Of course, the list of all the members of one team will be empty.
+- Map of the entities.
+- Information about each one of the entities:
+  - Name
+  - ID
+  - Life
+  - Maximum life
+  - Mana 
+  - Maximum mana
+  - Possible actions List
+  - Taken actions list
+
+
+
+The **information that the client has to send** to the map is:
+
+- List of actions ID that the entity executes.
+
+
+
+Okay, now we know what we want to send, but in **which structure**?
+
+**The client message** is quite simple: a ordered list of triplets that contain the ActionType ID, the coordinate X of the destination and the coordinate Y of the destination. 
+
+**The server message** requires some changes. The information is structured the way it is in the server for good reasons, but since the idea is that the server and the client are completely independent I think that the best option is to organise the information in a more natural way. That means that now instead of having a matrix of entities ID now we are going to store the full entity in the matrix, some information will be omitted and the actions will follow the same format that is used for the client message. For example, a map with two entities of different teams, each one in one starting in one corner of the map, after one round would look like this:
+
+```json
+[
+	[{},{
+        "name": "player1",
+        "ID": 1,
+        "life": 8,
+        "max_life": 8,
+        "mana": 4,
+        "max_mana": 4,
+        "possible_actions": [1,2,4,5,6],
+        "taken_actions": [[1,1,0],[1,2,0],[2,2,2],[1,1,0]],
+    ,{}],
+	[{},{},{}],
+	[{},{},{
+        "name": "player2",
+        "ID": 2,
+        "life": 6,
+        "max_life": 6,
+        "mana": 6,
+        "max_mana": 6,
+        "possible_actions": [1,2,3,6],
+        "taken_actions": [],
+    }]
+]
+```
+
+Reading this JSON structure we can know that it was the turn of `player1` (because its "taken_action" list is not empty), and knowing that 1 is the actionID for move and 2 is the actionID for some kind of attack we can read that:
+
+1. Player1 has moved to (1,0)
+2. Then it has moved to (2,0) to have player2 in the line of sight
+3. Player1 has attacked to the player2 position 
+4. Player1 has moved to (1,0) to avoid being in the line of sight of player2.
+
 
 
 ### Broker
@@ -51,7 +116,3 @@ What I want to do is not that complicated to do with sockets, but by using a bro
 The two options that I have evaluated are ZeroMQ and RabbitMQ. I have decided to use RabbitMQ since it seems that is easier to use and I do not need the extra speed that ZeroMQ offers.
 
 
-
-### Time problems
-
-[TODO]

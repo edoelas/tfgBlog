@@ -24,7 +24,7 @@ By 2D user interface I am refering to all the elements that are displayed withou
 
 ### Inspiration
 
-The inspiration for the layout is almost any game I have played. I am not a professional GUI designer so I have tried to be conservative in this department. The ideas behind this is that if I do the  same that most of the games do is it harder to do it wrong and that the user will be able to use the knowledge learned in other games in my game.
+The inspiration for the layout is almost any game I have played. I am not a professional GUI designer so I have tried to be conservative in this section. The ideas behind this is that if I do the  same that most of the games do is it harder to do it wrong and that the user will be able to use the knowledge learned in other games in my game. This is the layout I have chosen:
 
 ![](./../assets/images/Guilayout.svg){:.img}
 
@@ -63,7 +63,27 @@ For a 720p screen resolution each tile has a size of 8x8 pixels (even if it look
 
 ## 3D graphics
 
+### Inspiration
 
+The main inspiration cames from Ragnarok Online. This game uses a low poly approach with detailed textures that help us to understand the environment and for the elements that require more detail they just use [sprites](https://en.wikipedia.org/wiki/Sprite_(computer_graphics)):
+
+![Ragnarok Online screenshot](./../assets/images/ragnarokOnline.jpg){:.img}
+
+A more modern example of this kind of graphics is Octopath Traveler:
+
+![Octopath Traveler screenshot](/home/edoelas/git/tfgblog/assets/images/octopathTraveler.jpg)
+
+In Octopath Traveler we can see that even if the basic idea is the same, the usage of more sophisticated lights, camera focus, shaders etc. creates a really nice scenario. 
+
+### The sprites
+
+One of my biggest problems is where to find the sprites. I would to include a camera that is able to rotate around the Z axis, but to archive this more or less smoothly I need lots of sprites from different positions. The solution can be found in the development of [Dead Cells](https://dead-cells.com/). They design their characters in 3d and the transform them to 2D. A more detailed explanation can be found [here](https://www.gamasutra.com/view/news/313026/Art_Design_Deep_Dive_Using_a_3D_pipeline_for_2D_animation_in_Dead_Cells.php). My idea is doing something similar but with 3D characters created by someone else. Then I will use blender to convert them to 2D from lots of different positions (probably between 16 and 32).
+
+The best option I have found so far are [this characters](https://assetstore.unity.com/packages/3d/characters/humanoids/polygon-mini-fantasy-character-pack-122084) by Synty Studios. They are cheap and in my experiments look good.
+
+
+
+[TODO]
 
 
 
