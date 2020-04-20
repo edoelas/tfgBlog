@@ -24,7 +24,7 @@ By 2D user interface I am refering to all the elements that are displayed withou
 
 ### Inspiration
 
-![Pokemon Screenshot](./../assets/images/pokemon.png)
+![Pokemon Screenshot](./../assets/images/pokemon.png){:.img}
 
 The main inspiration for this design choices are the old Pokemon games. After watching [this](https://www.youtube.com/watch?v=gwF0L55kIgg) video about it's pixel art I thought that following a similar approach to design the GUI should be way faster and look good. 
 
@@ -36,7 +36,7 @@ First I need to create a spreadsheet with all the elements that I will need for 
 
 
 
-![](./../assets/images/spreadsheet1.png)
+![](./../assets/images/spreadsheet1.png){:.img}
 
 ## 3D graphics
 
