@@ -42,7 +42,22 @@ First I need to create a spreadsheet with all the elements that I will need for 
 
 ![](./../assets/images/spreadsheet1.png){:.img}
 
-After this, using 
+Then, using the program called [Tiled](https://www.mapeditor.org/) I create the GUI elements.
+
+![](./../assets/images/test2_map.png){:.img}
+
+The two main advantages of this approach are:
+
+- **Fast iterations:** it is easy and fast to create new UI elements.
+- **Fast changes**: by modifying the tile set all the UI elements get modified, so if I want to try a new colour palette or more rounded borders I just have to make a fast change in the tile-set image.
+
+The next step is choosing the colour palette. To do this I want to use the hue shifting technique. This is something that still has to be done, this is just a temporary example:
+
+![](./../assets/images/test2_map_colour.png){:.img}
+
+### Multiple screen resolutions
+
+
 
 ## 3D graphics
 
