@@ -36,7 +36,7 @@ First I need to create a spreadsheet with all the elements that I will need for 
 
 
 
-![](/home/edoelas/git/tfgblog/assets/images/spreadsheet1.png)
+![](./../assets/images/spreadsheet1.png)
 
 ## 3D graphics
 
