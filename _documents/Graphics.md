@@ -18,6 +18,30 @@ As the game engine I have decided to use [Godot](https://godotengine.org/) since
 
 The goal with the graphics in this game is to design a pleasant graphics that allow the user to easily identify all the important elements of the game while using as less resources as possible. This means that the focus of the graphics is not to make them realistic or beautiful, but useful.
 
+## 2D UI
+
+By 2D user interface I am refering to all the elements that are displayed without perspective in the game, its positioning, size, design, colour choices etc.
+
+### Inspiration
+
+![Pokemon Screenshot](./../assets/images/pokemon.png)
+
+The main inspiration for this design choices are the old Pokemon games. After watching [this](https://www.youtube.com/watch?v=gwF0L55kIgg) video about it's pixel art I thought that following a similar approach to design the GUI should be way faster and look good. 
+
+Old Pokemon games for the game-boy colour used a 4 colour palette and a tile system. Each tile was a square of 8x8 pixels.
+
+### My approach
+
+First I need to create a spreadsheet with all the elements that I will need for creating the UI. The tool chosen to do this is Gimp. The colour palette will be in grey scale to keep thing simple and make sure that the bright gap between the colours is consistent. In this example I have used 20%, 40%, 60% and 80% brightness. 
+
+
+
+![](/home/edoelas/git/tfgblog/assets/images/spreadsheet1.png)
+
+## 3D graphics
+
+
+
 
 
 ## Techniques
