@@ -26,7 +26,7 @@ By 2D user interface I am refering to all the elements that are displayed withou
 
 The inspiration for the layout is almost any game I have played. I am not a professional GUI designer so I have tried to be conservative in this department. The ideas behind this is that if I do the  same that most of the games do is it harder to do it wrong and that the user will be able to use the knowledge learned in other games in my game.
 
-![](/home/edoelas/git/tfgblog/assets/images/Guilayout.svg)
+![](./../assets/images/Guilayout.svg){:.img}
 
 
 
@@ -56,6 +56,8 @@ The next step is choosing the colour palette. To do this I want to use the hue s
 ![](./../assets/images/test2_map_colour.png){:.img}
 
 ### Multiple screen resolutions
+
+For a 720p screen resolution each tile has a size of 8x8 pixels (even if it looks like 4x4). If we want to use the interface in a 1440p screen the UI would look too small, but thanks to the choice of using pixel art I can just scale the image by two, having each tile a size of 16x16 pixels, and it will look exactly the same. The same happens with 1080p screens, but this time the image must be scaled 1.5 times, generating tiles of  12x12. 
 
 
 
