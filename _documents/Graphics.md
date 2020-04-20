@@ -24,11 +24,15 @@ By 2D user interface I am refering to all the elements that are displayed withou
 
 ### Inspiration
 
+The inspiration for the layout is almost any game I have played. I am not a professional GUI designer so I have tried to be conservative in this department. The ideas behind this is that if I do the  same that most of the games do is it harder to do it wrong and that the user will be able to use the knowledge learned in other games in my game.
+
+![](/home/edoelas/git/tfgblog/assets/images/Guilayout.svg)
+
+
+
+The main inspiration for the graphical elements used are the old Pokemon games. After watching [this](https://www.youtube.com/watch?v=gwF0L55kIgg) video about it's pixel art I thought that following a similar approach to design the GUI should be way faster and look good. Old Pokemon games for the game-boy colour used a 4 colour palette and a tile system. Each tile was a square of 8x8 pixels.
+
 ![Pokemon Screenshot](./../assets/images/pokemon.png){:.img}
-
-The main inspiration for this design choices are the old Pokemon games. After watching [this](https://www.youtube.com/watch?v=gwF0L55kIgg) video about it's pixel art I thought that following a similar approach to design the GUI should be way faster and look good. 
-
-Old Pokemon games for the game-boy colour used a 4 colour palette and a tile system. Each tile was a square of 8x8 pixels.
 
 ### My approach
 
@@ -37,6 +41,8 @@ First I need to create a spreadsheet with all the elements that I will need for 
 
 
 ![](./../assets/images/spreadsheet1.png){:.img}
+
+After this, using 
 
 ## 3D graphics
 
