@@ -29,3 +29,8 @@ In order to consider the AI adequate there are some features that it has to acco
 
 
 
+## Evaluation function
+
+In order to be able to apply artificial intellgence 
+
+### Evolutionary algorithms
