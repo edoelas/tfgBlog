@@ -1,16 +1,37 @@
 body{
-    color: #444;
-    background-color: #EEE;
-    margin: 40px auto;
-    max-width: 650px;
-    line-height: 1.6em;
-    font-size: 18px;
-    padding: 0;
+  color: #444;
+  background-color: #EEE;
+  padding: 0px;
+  margin: 0px;
+
+}
+header{
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6em;
+  font-size: 18px;
+  padding: 0;
+}
+section{
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6em;
+  font-size: 18px;
+  padding: 0;
 }
 
-.center-img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-  }
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+image-rendering: -moz-crisp-edges;          /* Firefox                        */
+image-rendering: -o-crisp-edges;            /* Opera                          */
+image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+image-rendering: pixelated; /* Chrome */
+image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+}
