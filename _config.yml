@@ -1,5 +1,6 @@
 auto: true
 
+highlighter: rouge
 collections:
   documents:
     output: true
