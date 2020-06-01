@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image post-processing.
-typora-root-url: ..
+typora-root-url: ../..
 ---
 
 It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is to slow. I mean, 2.5 seconds per image does no look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
@@ -65,7 +65,7 @@ def reduce_colors(img, threshold):
 
 Yes, this code could have been done by a monkey, but I needed to make sure that this approach worked before worrying about how fast it was. I also know it is not the best way to do it because it just has into account the first occurrence of the colour and not the average of all the colours that are under the threshold. This is an example of the images I am working with:
 
-![](/tfgblog/assets/images/character.png)
+![](/tfgblog/assets/images/character.png){:.img}
 
 The biggest problem is that we are following an iterative approach by using 3 for loops when numpy is optimised for matrix operations. Seriously, this code is plain garbage, I am ashamed of myself, but we are still in time to amend our mistakes.
 
@@ -75,7 +75,7 @@ At this point we don't care about the geometry of the image so we could imagine 
 
 First problem: which clustering algorithm to use. In order to find the answer lets refer to this document from scikit learn: [2.3. Clustering](https://scikit-learn.org/stable/modules/mixture.html). 
 
-![	](/tfgblog/assets/images/sphx_glr_plot_cluster_comparison_0011.png)
+![](/tfgblog/assets/images/sphx_glr_plot_cluster_comparison_0011.png){:.img}
 
 Our data will have a shape similar to the fifth row and the speed shouldn't be a problem since this package is really fast. The most important thing to have into account is that we don't know the number of clusters that we will need so our loved K-Means is out of the game. After trying multiple options with different images the one that has given the best results is Mean Shift.
 
@@ -167,7 +167,7 @@ for pos,image in enumerate(img):
 
 Okay, now let's have a look to the time of executing all the process with different amounts of images. In this graph we can see the times of the code above compared to a iterative version of the same where each image is processed completely individually:
 
-![chart](./../assets/images/chart.png){:.img}
+![chart](/tfgblog/assets/images/chart.png){:.img}
 
 As we can see, at least in the first half, both approaches are linear, but the iterative process has a bigger inclination. The difference in time is huge. If we compare the times for 3000 images (that is the size of the sets of images that we are going to work with ) the iterative approach takes 138.34 s while the combined approach takes 22.5. This is 6.15 times faster. By the way, the original code would have taken 7260 s approx, this means that our code now it is 322.66 times faster.
 
