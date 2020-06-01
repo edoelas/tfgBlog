@@ -65,7 +65,7 @@ def reduce_colors(img, threshold):
 
 Yes, this code could have been done by a monkey, but I needed to make sure that this approach worked before worrying about how fast it was. I also know it is not the best way to do it because it just has into account the first occurrence of the colour and not the average of all the colours that are under the threshold. This is an example of the images I am working with:
 
-![character](/assets/images/character_post_processing_pixel.png){:.img}
+![characters](/assets/images/character_post_processing_pixel.png){:.img}
 
 The biggest problem is that we are following an iterative approach by using 3 for loops when numpy is optimised for matrix operations. Seriously, this code is plain garbage, I am ashamed of myself, but we are still in time to amend our mistakes.
 
