@@ -1,5 +1,4 @@
 auto: true
-permalink: "/blog/:title/"
 
 highlighter: rouge
 collections:

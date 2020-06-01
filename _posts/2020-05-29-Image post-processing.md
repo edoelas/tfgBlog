@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Image post-processing.
+typora-root-url: ..
 ---
 
 It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is to slow. I mean, 2.5 seconds per image does no look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
@@ -74,7 +75,7 @@ At this point we don't care about the geometry of the image so we could imagine 
 
 First problem: which clustering algorithm to use. In order to find the answer lets refer to this document from scikit learn: [2.3. Clustering](https://scikit-learn.org/stable/modules/mixture.html). 
 
-![../_images/sphx_glr_plot_cluster_comparison_0011.png](/home/edoelas/git/tfgblog/assets/images/sphx_glr_plot_cluster_comparison_0011.png)
+![](/tfgblog/images/assets/images/sphx_glr_plot_cluster_comparison_0011.png)
 
 Our data will have a shape similar to the fifth row and the speed shouldn't be a problem since this package is really fast. The most important thing to have into account is that we don't know the number of clusters that we will need so our loved K-Means is out of the game. After trying multiple options with different images the one that has given the best results is Mean Shift.
 
