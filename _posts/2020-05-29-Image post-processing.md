@@ -4,7 +4,7 @@ title: Image post-processing.
 typora-root-url: ../..
 ---
 
-It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is to slow. I mean, 2.5 seconds per image does not look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
+It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is too slow. I mean, 2.42 seconds per image does not look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
 
 The different parts of the image processing are:
 
@@ -147,19 +147,23 @@ Now we have a set of really cool functions that allow us to extract palettes fro
 files = [f for f in listdir(origin) if isfile(join(origin, f))]
 image_collection = np.empty(shape=(len(files),90,64,4))
 
+# Store all the images in one array
 for pos,image_path in enumerate(files):
     img = skimage.io.imread(origin + '/' + image_path)
     img = downscale(img)
     image_collection[pos] = img
-    
+
+# Extract the important data and calculate the reduced colour palette
 data = image2data(image_collection)
 data_shuffle = np.random.permutation(data)
 reduced_palette = reduce_colours(data_shuffle[:2000])
 
+# Remap the data and convert it to a usable image
 data = remap_colours(data, reduced_palette)
 data = remap_colours(data, new_palette)
 img = data2image(data,image_collection.reshape(90,-1,4)).reshape(-1,90,64,4)
 
+# Save the images
 for pos,image in enumerate(img):
 	skimage.io.imsave(destination + '/' + files[pos], image)
 
@@ -219,9 +223,7 @@ def downscale(img):
 
 
 def image2data(img):
-    # Reshape the data
     data = img.reshape(img.shape[0]*img.shape[1],img.shape[2])
-    # Delete transparent pixels and reduce dimensions to 3
     data = data[data[:,3] != 0]
     data = data[:,0:3]
 	
@@ -229,10 +231,8 @@ def image2data(img):
 
 
 def data2image(data, img):
-    # Add alpha value
     rgba = np.ones((data.shape[0],data.shape[1]+1))*255
     rgba[:,:-1] = data
-    # Put the colours in the places where they belong
     index_not_transparent = np.where(img[:,:,3] != 0)
     img_out = np.zeros_like(img)
     img_out[index_not_transparent[0][:],index_not_transparent[1][:]] = rgba[:]
@@ -241,7 +241,6 @@ def data2image(data, img):
 
 
 def reduce_colours(data):
-    # calculate clusters and centroids
     bandwidth = estimate_bandwidth(data, quantile=0.14, n_samples=len(data))
     ms = MeanShift(bandwidth=bandwidth, bin_seeding=True).fit(data)
     palette = ms.cluster_centers_.astype(np.uint8)
@@ -250,11 +249,8 @@ def reduce_colours(data):
 
 
 def remap_colours(data,palette):
-    # Calculate distances
     distances = cdist(data, palette)
-    # Get the index of the color with minimun distance
     indexes_nearest_colour = np.argmin(distances,axis=1)
-    # Create a list with the colours with the minimum distances
     data = palette[indexes_nearest_colour]
 
     return data
