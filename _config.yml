@@ -6,5 +6,5 @@ collections:
     output: true
     permalink: /document/:name
 
-permalink: "/tfgblog/:title/"    
+permalink: /tfgblog/:title
 baseurl: /tfgblog
