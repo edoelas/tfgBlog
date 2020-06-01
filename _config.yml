@@ -1,11 +1,10 @@
 auto: true
+permalink: "/blog/:title/"
 
 highlighter: rouge
 collections:
   documents:
     output: true
     permalink: /document/:name
-  posts:
-    permalink: /tfgblog/:name
 
 baseurl: /tfgblog
