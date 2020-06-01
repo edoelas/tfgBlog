@@ -5,6 +5,7 @@ collections:
   documents:
     output: true
     permalink: /document/:name
+  posts:
+    permalink: /tfgblog/:title/
 
 baseurl: /tfgblog
-
