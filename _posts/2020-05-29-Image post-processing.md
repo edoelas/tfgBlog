@@ -4,7 +4,7 @@ title: Image post-processing.
 typora-root-url: ../..
 ---
 
-It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is to slow. I mean, 2.5 seconds per image does no look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
+It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is to slow. I mean, 2.5 seconds per image does not look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
 
 The different parts of the image processing are:
 
@@ -167,7 +167,7 @@ for pos,image in enumerate(img):
 
 Okay, now let's have a look to the time of executing all the process with different amounts of images. In this graph we can see the times of the code above compared to a iterative version of the same where each image is processed completely individually:
 
-![chart](/tfgblog/assets/images/chart.png){:.img}
+![chart](/tfgblog/assets/images/chart%20(1)-1591031078701.svg)
 
 As we can see, at least in the first half, both approaches are linear, but the iterative process has a bigger inclination. The difference in time is huge. If we compare the times for 3000 images (that is the size of the sets of images that we are going to work with ) the iterative approach takes 138.34 s while the combined approach takes 22.5. This is 6.15 times faster. By the way, the original code would have taken 7260 s approx, this means that our code now it is 322.66 times faster.
 
