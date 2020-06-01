@@ -7,3 +7,4 @@ collections:
     permalink: /document/:name
 
 baseurl: /tfgblog
+permalink: /tfgblog/:title/

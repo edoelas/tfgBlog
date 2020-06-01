@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image post-processing.
-typora-root-url: ../..
+typora-root-url: ..
 ---
 
 It is time to address a small problem... The image processing that I apply after rendering the 3D models for the characters is to slow. I mean, 2.5 seconds per image does no look like too much but if you take into account that we will have to process around 30.000 images it starts adding up.
@@ -65,7 +65,7 @@ def reduce_colors(img, threshold):
 
 Yes, this code could have been done by a monkey, but I needed to make sure that this approach worked before worrying about how fast it was. I also know it is not the best way to do it because it just has into account the first occurrence of the colour and not the average of all the colours that are under the threshold. This is an example of the images I am working with:
 
-![characters](tfgblog/assets/images/character_post_processing_pixel.png){:.img}
+![characters](assets/images/character_post_processing_pixel.png){:.img}
 
 The biggest problem is that we are following an iterative approach by using 3 for loops when numpy is optimised for matrix operations. Seriously, this code is plain garbage, I am ashamed of myself, but we are still in time to amend our mistakes.
 
