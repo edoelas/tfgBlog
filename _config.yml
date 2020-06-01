@@ -6,6 +6,6 @@ collections:
     output: true
     permalink: /document/:name
   posts:
-    permalink: /tfgblog/:title/
+    permalink: /tfgblog/:name
 
 baseurl: /tfgblog
