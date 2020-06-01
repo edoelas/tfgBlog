@@ -5,3 +5,5 @@ collections:
   documents:
     output: true
     permalink: /document/:name
+
+permalink: "/tfgblog/:title"
