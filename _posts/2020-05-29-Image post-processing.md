@@ -11,7 +11,7 @@ The different parts of the image processing are:
 - **Reading the image**: this part is done by the skimage package so we will not worry about the speed of this part.
 - **Down-scaling image**: to downscale the image we also use a function of the skimage package that is really fast, so we won't worry about this part.
 - **Reducing the amount of colours**:  this is a custom function that uses numpy arrays operations to reduce the amount of colours as much as possible without being noticeable for the human eye. 
-- **Getting the colours of the palette**: this function reads a image a creates a list with its colours. Since this function is just used once in every batch of images it is not a problem and it is already quite fast.
+- **Getting the colours of the palette**: this function reads an image and creates a list with its colours. Since this function is just used once in every batch of images it is not a problem and it is already quite fast.
 - **Remapping the colours of the image**: this is the most important function and the one that takes most of the time. What it does is changing the colours of one image for the closest one in a palette.
 
 ## Benchmarks
@@ -30,7 +30,7 @@ Yes, it is not the best benchmark in the world, in fact is bad, but it should be
 
 As you can see the two functions that deserve our attention is the colour reduction and the colour remapping ones. I don't know how I managed to create such a slow code. Each image takes 2.42s to be processed. 
 
-The new approach will be based on the idea of instead of creating a function that will return us the colour reduced image it would be really clever to create a function that returns the reduced colour palette. Then we could use the colour remapping function to apply this reduced palette to the image and the new palette.
+The new approach will be based on the idea of instead of creating a function that will return us the colour reduced image we will create a function that returns the reduced colour palette. Then we could use the colour remapping function to apply this reduced palette to the image and after that the new palette.
 
 ## Colour reduction
 
@@ -79,7 +79,7 @@ First problem: which clustering algorithm to use. In order to find the answer le
 
 Our data will have a shape similar to the fifth row and the speed shouldn't be a problem since this package is really fast. The most important thing to have into account is that we don't know the number of clusters that we will need so our loved K-Means is out of the game. After trying multiple options with different images the one that has given the best results is Mean Shift.
 
-Before applying the clustering algorithm we should think if it is possible to process our data to improve the speed. As I said before we are using a RGBA model and in our image the alpha value is either 0 or 255. This is because when we downscale our image we disable the anti-aliasing [CHECK] to get this pixel-art effect. Since all the values with 0 alpha belong to the background and we don't care about them we can delete all the members of our dataset that have 0 alpha and after that we can reduce the dimensionality to 3 by deleting the alpha value of all our members.
+Before applying the clustering algorithm we should think if it is possible to process our data to improve the speed. As I said before we are using a RGBA model and in our image the alpha value is either 0 or 255. This is because when we downscale our image we disable the anti-aliasing to get this pixel-art effect. Since all the values with 0 alpha belong to the background and we don't care about them we can delete all the members of our dataset that have 0 alpha and after that we can reduce the dimensionality to 3 by deleting the alpha value of all our members.
 
 Let's see how we can do this:
 
@@ -123,7 +123,7 @@ index_nearest_colour = np.argmin(distances,axis=1)
 out_rgb = palette[indexes]
 ```
 
-But this code array it is not usable yet. First we have to add the alpha value again and add all the transparent pixels we removed at the beginning:
+But this array is not usable yet. First we have to add the alpha value again and add all the transparent pixels we removed at the beginning:
 
 ```python
 # Add alpha value
@@ -168,6 +168,10 @@ for pos,image in enumerate(img):
 	skimage.io.imsave(destination + '/' + files[pos], image)
 
 ```
+
+
+
+## Benchmarks
 
 Okay, now let's have a look to the time of executing all the process with different amounts of images. In this graph we can see the times of the code above compared to a iterative version of the same where each image is processed completely individually:
 
