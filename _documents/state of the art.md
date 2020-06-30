@@ -16,6 +16,6 @@ The idea of creating a game inside a computer was not born thinking in having fu
 
 If you are a game artist and you want to make a real retro game do not use pixel art with a nice colour palette, you should use monochrome vector graphics. 
 
-![File:Spacewar1.svg - Wikimedia Commons](/tfgblog/assets/images/Spacewar1.png){:.img}
+![SpaceWars](/tfgblog/assets/images/Spacewar1.png){:.img}
 
-![Star Cruiser Videos for Arcade Games - GameFAQs](/tfgblog/assets/images/starcruiser.jpg){:img}
+![Star Cruiser](/tfgblog/assets/images/starcruiser.jpg){:.img}
