@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Client-Server communication
+typora-root-url: ../..
 ---
 
 Okay, this is way harder than I thought. But let's solve the problem one by one.
@@ -9,7 +10,7 @@ Okay, this is way harder than I thought. But let's solve the problem one by one.
 
 This diagram shows more or less which the idea:
 
-![](/tfgblog/assets/images/sequenceDiagram.svg){:.img}
+![](./tfgblog/assets/images/sequenceDiagram.svg){:.img}
 
 
 
